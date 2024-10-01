@@ -1,3 +1,5 @@
+#! /bin/bash
+
 echo "This script will create two ssh keys for your github accounts.\nWould you like to proceed? (y/n)"
 read response
 

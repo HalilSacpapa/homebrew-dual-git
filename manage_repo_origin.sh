@@ -1,3 +1,5 @@
+#! /bin/bash
+
 names=()
 for pubkey in ~/.ssh/*.pub; do
     names=(${names[@]} $(echo $pubkey | sed 's/.*\///' | sed 's/.pub//'))
