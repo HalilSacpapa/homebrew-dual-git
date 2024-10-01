@@ -1,11 +1,7 @@
 #! /bin/bash
 
-echo "This script will create two ssh keys for your github accounts.\nWould you like to proceed? (y/n)"
+echo "This script will create two ssh keys for your github accounts.\nPress return to proceed."
 read response
-
-if [ response == "n" ]; then
-    exit 1
-fi
 
 echo "\nEnter the email adress of your first account:"
 read email1
@@ -18,12 +14,8 @@ echo "Enter the name of your second account:"
 read name2
 
 
-echo "the following ssh keys will be created:\n\t$email1 (~/.ssh/$name1.pub)\n\t$email2 (~/.ssh/$name2.pub)\n\nWould you like to proceed? (y/n)"
+echo "the following ssh keys will be created:\n\t$email1 (~/.ssh/$name1.pub)\n\t$email2 (~/.ssh/$name2.pub)\n\nPress return to proceed."
 read response
-
-if [ response == "n" ]; then
-    exit 1
-fi
 
 echo "\n\n"
 ssh-keygen -t rsa -b 4096 -C "$email1" -f ~/.ssh/$name1
