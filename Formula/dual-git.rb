@@ -7,7 +7,7 @@ class DualGit < Formula
     version "1.0"
 
     def install
-      bin.install "dual-git.sh" => "dgit"
+      bin.install "dual_git.sh" => "dgit"
     end
 
     test do
