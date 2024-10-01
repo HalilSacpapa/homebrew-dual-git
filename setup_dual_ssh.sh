@@ -47,7 +47,7 @@ read response
 echo "We will setup the ssh config file located at ~/.ssh/config.\n"
 domain1="github.com-$name1"
 domain2="github.com-$name2"
-echo "Host $domain1\n\tHostName github.com\n\tUser git\n\tIdentityFile ~/.ssh/$name1\n\nHost $domain2\n\tHostName github.com\n\tUser git\n\tIdentityFile ~/.ssh/$name2" >> ~/.ssh/config
+echo "Host $domain1\n\tHostName github.com\n\tUser git\n\tIdentityFile ~/.ssh/$name1\n\nHost $domain2\n\tHostName github.com\n\tUser git\n\tIdentityFile ~/.ssh/$name2" > ~/.ssh/config
 
 if [ $response == "1" ]; then
     echo "\nUsing $name1 with $email1 by default."
