@@ -1,15 +1,15 @@
 #! /bin/bash
 
 if [[ $1 == "setup" ]]; then
-    exec ~/.dual_git/setup_dual_ssh.sh
+    exec /opt/homebrew/Library/Taps/halilsacpapa/homebrew-dual-git/setup_dual_ssh.sh
 elif [[ $1 == "set-origin" ]]; then
-    exec ~/.dual_git/manage_repo_origin.sh
+    exec /opt/homebrew/Library/Taps/halilsacpapa/homebrew-dual-git/manage_repo_origin.sh
 elif [[ $1 == "clone" ]]; then
     if [[ $# -ne 2 ]]; then
         echo "Usage: dgit clone <repo-ssh-url>"
         exit 1
     fi
-    exec ~/.dual_git/setup_clone_ssh.sh $2
+    exec /opt/homebrew/Library/Taps/halilsacpapa/homebrew-dual-git/setup_clone_ssh.sh $2
 elif [[ $1 == "--help" ]]; then
     echo -e "dgit is a script that allow basic multiple ssh usage, linked to differents github accounts.\n"
     echo -e "Available commands:"
