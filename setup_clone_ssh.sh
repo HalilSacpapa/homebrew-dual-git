@@ -10,7 +10,7 @@ done
 echo "${#names[@]} ssh key found:"
 i=1
 for elem in ${names[@]}; do
-    echo "\t$i. $elem"
+    echo -e "\t$i. $elem"
     i=$((i+=1))
 done
 echo "\nWhich one do you want to use ? (1/2/...)"
